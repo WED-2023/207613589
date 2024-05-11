@@ -4,10 +4,11 @@ body {
   }
   
   .top-bar {
-	background-color: rgb(197, 181, 197);
+	background-color: rgb(177, 128, 128);
 	height: auto;
 	width: 100%;
 	display: flex;
+	color: #813d3d;
 	justify-content: space-around;
 	align-items: center;
 	padding-top: 10px;
@@ -60,4 +61,11 @@ body {
 	background-clip: text;
 	-webkit-background-clip: text;
   }
+
+  .left-align {
+	text-align: left;
+	padding: 10px;
+	font-size: 20px;
+  }
+  
   
