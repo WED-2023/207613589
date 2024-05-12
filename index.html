@@ -1,8 +1,27 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gandalf</title>
+  <link rel="icon" href="images/hat_icon.png" type="image/x-icon">
+    <style>
+    .section1 { background-color: lightblue; }
+    .section2 { background-color: lightgreen; }
+    .section3 { background-color: lightcoral; }
+
+    /* This class will be applied when the section is in view */
+    .active {
+      font-size: 48px;
+      transition: font-size 0.5s;
+    }
+  </style>
+
+  
 </head>
 
 <body>
@@ -120,6 +139,23 @@
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
 
+
+<section id="like" class="section" style="text-align: center;">
+  <h2>Like</h2>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
+               &version=10.0
+               &appId=YOUR_FACEBOOK_APP_ID_HERE" nonce="FOKrbAYI">
+              </script>
+  <p>My main page</p>
+  <div class="fb-like" data-href="https://www.facebook.com/profile.php?id=100050430492535" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+  
+    <p>My qutoe page</p>
+    <div class="fb-like" data-href="https://www.facebook.com/GandalfQuotes" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+
+</section>
+
 <section id="qrcoder" class="section" style="text-align: center;">
   <h2>QR code</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ultricies dolor. Donec ac turpis vitae risus
@@ -163,18 +199,18 @@
   </ol>
 
   <h1 style="display: inline-block; padding: 30px;"> Example</h1>
-  <p class="left-align">To show an exmaple, we can for instance seach for "medcine for headace" because we feel sick.</p>
+  <p class="left-align">To show an exmaple, we can for instance seach for "medcine for headace" because we feel sick.
+  </p>
 
-  <p class="left-align"><strong>Web 1.0:</strong> In this case, we will have to look for a specific site, and in it, to search a specific medicin name, and probably this will take alot of time, hard and we'll have to know the name of it before hand, making the search not good at all.</p>
-  <p class="left-align"><strong>Web 2.0:</strong> In this case, we will probably get a list of couple of medicins, options and maybe a blog or a post about headaces, and it will be very useful. In couple of clicks and we have the result.</p>
-  <p class="left-align"><strong>Web 3.0:</strong> In this case, we will probably get a list of couple of medicins as well, but now the top pick might me a pharmacy close by to me, the open-close hours and such. knowing already what I will need afterwards, not just what I seached for.</p>
-
-
-
-
-
-
-
+  <p class="left-align"><strong>Web 1.0:</strong> In this case, we will have to look for a specific site, and in it, to
+    search a specific medicin name, and probably this will take alot of time, hard and we'll have to know the name of it
+    before hand, making the search not good at all.</p>
+  <p class="left-align"><strong>Web 2.0:</strong> In this case, we will probably get a list of couple of medicins,
+    options and maybe a blog or a post about headaces, and it will be very useful. In couple of clicks and we have the
+    result.</p>
+  <p class="left-align"><strong>Web 3.0:</strong> In this case, we will probably get a list of couple of medicins as
+    well, but now the top pick might me a pharmacy close by to me, the open-close hours and such. knowing already what I
+    will need afterwards, not just what I seached for.</p>
 
 
 
@@ -198,6 +234,23 @@
   $(document).scroll(function () {
     $('#menu').toggle($(this).scrollTop() > 1000)
   });​
+</script>
+<script>
+  window.addEventListener('scroll', function() {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+      var rect = section.getBoundingClientRect();
+      var isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+      if (isVisible) {
+        // Remove 'active' class from all sections
+        sections.forEach(function(s) {
+          s.classList.remove('active');
+        });
+        // Add 'active' class to the current section
+        section.classList.add('active');
+      }
+    });
+  });
 </script>
 </body>
 
