@@ -138,3 +138,22 @@ body h2 {
     width: 100%;
     height: 140px;
   }
+
+  .section1 {
+    background-color: lightblue;
+  }
+
+  .section2 {
+    background-color: lightgreen;
+  }
+
+  .section3 {
+    background-color: lightcoral;
+  }
+
+  /* This class will be applied when the section is in view */
+  .active {
+    font-size: 48px;
+    transition: font-size 0.5s;
+  }
+  
