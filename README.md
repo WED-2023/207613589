@@ -1,6 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/GmyrjvXu)
 # About
-This site is about Gadndalf, a very powerful wizard living in the "Lord of the ring" universe.
+This site is about Gandalf, a very powerful wizard living in the "Lord of the ring" universe.
 
 ![front](https://github.com/WED-2023/207613589/assets/127610421/6e2905fc-2a4a-4ee9-91fa-bb3270f9fb61)
 
